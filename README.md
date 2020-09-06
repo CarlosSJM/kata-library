@@ -1,8 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+In the project directory, you can run to init proyect :
 
 ### `yarn start`
 
@@ -12,33 +8,103 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Primera kata -> FooBarQuix:
+Nos dan un numero entre el 1 y 100, y tenemos que devolver por orden lo siguiente:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejemplos:
+1 -> 1
+2 -> 2
+3 -> FooFoo (divisible por 3, contiene 3)
+4 -> 4
+5 -> BarBar (divisible por 5, contiene 5)
+6 -> Foo (divisible por 3)
+7 -> QuixQuix (divisible por 7, contiene 7)
+8 -> 8
+9 -> Foo
+10 -> barra
+13 -> Foo
+15 -> FooBarBar (divisible por 3, divisible por 5, contiene 5)
+21 -> FooQuix
+33 -> FooFooFoo (divisible por 3, contiene 3)
+51 -> FooBar
+53 -> BarFoo
+75 -> FooBarQuixBar(divisible por 3, divisible por 5, contiene un 7, contiene un 5)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Segundo kata -> Sistema Romano:
+Vamos a hacer un ejercicio clásico y es jugar con los números romanos y árabes.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Como refresco, vamos a ver sus símboles y reglas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Símbolo
+Romano	Árabe
+yo	1
+V	5
+X	10
+L	50
+C	100
+re	500
+METRO	1000
+Reglas
+Sólo se contemplan números entre el 1 y el 3999
 
-### `yarn eject`
+Los símbolos I, X, C y M se pueden repetir hasta tres veces.
+Los símbolos V, L y D no pueden repetirse.
+Los símbolos I, X y C se suman si están a la derecha de otro mayor o igual.
+Los símbolos I, X y C se restan si están a la izquierda de otro mayor y solamente pueden anteponerse a los dos símbolos que le siguen en la sucesión.
+I se resta de V y X
+X se resta de L y C
+C se resta de D y M
+Los símbolos V, L y D no pueden colocarse a la izquierda de otro mayor.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tercera kata -> Poker:
+Introducción
+Una baraja de poker contiene 52 cartas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Cartas
+Una carta se compone de dos cosas:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Palo (suit) que pueden ser los siguientes:
 
-## Learn More
+picas / espadas (S)
+corazones/hearts (H)
+tréboles / clubs (C)
+diamantes / diamantes (D).
+Valor:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2
+3
+4
+5
+6
+7
+8
+9
+10 / diez (T)
+dama / Jack (J)
+reina / Reina (Q)
+rey / Rey (K)
+como / Ace (A).
+Mano
+Una mano es un conjunto de 5 cartas, estamos jugando con una baraja, por lo que no puede haber cartas repetidas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Las manos de poker se ordenan de menor a mayor dependiendo de una serie de reglas asociadas a la mano.
+
+High Card (Carta Más Alta): Para manos que no entran en ninguna de las manos superior, el ganador es aquel que tiene la carta más alta. Si se produce un empate entonces se compara la siguiente carta más alta y así sucesivamente.
+
+Pair (Parejas): 2 de las 5 cartas de la mano tienen el mismo valor. Si las dos manos tienen pareja, entonces gana la que tenga la pareja más alta. Si ambas parejas son iguales entonces gana el que tenga la carta más alta.
+
+Two Pairs (Dobles Parejas): La mano contiene 2 parejas diferentes. Si las dos manos tienen dobles parejas diferentes entonces gana aquella que tenga la pareja más alta. Si las dos manos tienen las mismas parejas entonces se compara la otra pareja. Si ambas manos tiene las mismas parejas entonces gana el que tenga la carta más alta restante.
+
+Three of a Kind (Trio): 3 cartas de la mano tienen el mismo valor. Gana la mano que tiene las 3 cartas con mayor valor.
+
+Straight (Escalera): La mano contiene 5 cartas consecutivas. Si las dos manos tienen escalera entonces gana la que tiene la carta más alta.
+
+Flush (Color): La mano tiene 5 cartas con la misma cara. Si ambas manos tienen escalera entonces gana el que tenga la carta más alta.
+
+Full House (Full): La mano tiene un trío y una pareja. En caso de tener ambas manos full entonces gana el que tenga el trío más alto.
+
+Four of a Kind (Poker): 4 cartas con el mismo valor. En caso de tener ambas manos poker gana el que tenga el valor más alto.
+
+Straight flush (Escalera de Color): 5 cartas de la misma cara pero con valores consecutivos. En caso de tener escalera las dos manos entonces gana el que tenga el valor más alto.
