@@ -108,3 +108,9 @@ Full House (Full): La mano tiene un trío y una pareja. En caso de tener ambas m
 Four of a Kind (Poker): 4 cartas con el mismo valor. En caso de tener ambas manos poker gana el que tenga el valor más alto.
 
 Straight flush (Escalera de Color): 5 cartas de la misma cara pero con valores consecutivos. En caso de tener escalera las dos manos entonces gana el que tenga el valor más alto.
+
+### dependences
+- Bootstrap
+- React router dom
+- React intl
+- redux? pending
